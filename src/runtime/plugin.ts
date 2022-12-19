@@ -1,15 +1,11 @@
-import { defineNuxtPlugin } from '#imports'
-import lazySizes from 'lazysizes'
+import { defineNuxtPlugin, useHead } from '#imports'
 import lazyimagesOptions from '#lazyimages-options'
 
-// Prevent automatic initialization
-lazySizes.cfg.init = false
+export default defineNuxtPlugin(async (nuxtApp) => {
 
-export default defineNuxtPlugin((nuxtApp) => {
+    const lazySizes = await import('lazysizes')
 
     // Assign custom options to Lazysizes
     Object.assign(lazySizes.cfg, lazyimagesOptions)
-
-    // Manual initialization
-    lazySizes.init()
+    
 })

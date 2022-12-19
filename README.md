@@ -48,6 +48,45 @@ Add the default `class` `lazyload` to your image in conjunction with a `data-src
 
 ✨ That's it!
 
+## Configuration
+
+If you wish to change the configuration of Lazysizes, open your `nuxt.config.ts` or `nuxt.config.js` file, and set the configuration using the `lazyimages` object:
+
+```ts
+import { defineNuxtConfig } from 'nuxt';
+
+export default defineNuxtConfig({
+    modules: [
+        'nuxt-lazyimages'
+    ],
+    lazyimages: {
+        // Default configuration:
+        lazyClass: 'lazyload',
+        preloadAfterLoad: false,
+        loadedClass: 'lazyloaded',
+        loadingClass: 'lazyloading',
+        preloadClass: 'lazypreload',
+        errorClass: 'lazyerror',
+        autosizesClass: 'lazyautosizes',
+        fastLoadedClass: 'ls-is-cached',
+        iframeLoadMode: 0,
+        srcAttr: 'data-src',
+        srcsetAttr: 'data-srcset',
+        sizesAttr: 'data-sizes',
+        minSize: 40,
+        customMedia: {},
+        expFactor: 1.5,
+        hFac: 0.8,
+        loadMode: 2,
+        loadHidden: true,
+        ricTimeout: 0,
+        throttleDelay: 125
+    }
+});
+```
+
+Please refer to [LazySizes' JS documentation](https://github.com/aFarkas/lazysizes#js-api) to know more about each option.
+
 ## Development
 
 - Clone this repository

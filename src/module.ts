@@ -52,7 +52,7 @@ export default defineNuxtModule<ModuleOptions>({
         configKey: 'lazyimages'
     },
     defaults: {
-        lazyClass: 'lazyload',
+        /*lazyClass: 'lazyload',
         preloadAfterLoad: false,
         loadedClass: 'lazyloaded',
         loadingClass: 'lazyloading',
@@ -71,11 +71,12 @@ export default defineNuxtModule<ModuleOptions>({
         loadMode: 2,
         loadHidden: true,
         ricTimeout: 0,
-        throttleDelay: 125
+        throttleDelay: 125*/
     },
     setup(options, nuxt) {
         const { resolve } = createResolver(import.meta.url)
         const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+
         nuxt.options.build.transpile.push(runtimeDir)
 
         // Inject options via virtual template
