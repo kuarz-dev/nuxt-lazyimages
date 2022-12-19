@@ -33,8 +33,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0",
-    "lazysizes": "^5.3.2"
+    "@nuxt/kit": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.1",
