@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin } from '#imports'
 import lazySizes from 'lazysizes'
 import lazyimagesOptions from '#lazyimages-options'
 

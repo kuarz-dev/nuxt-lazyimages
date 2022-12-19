@@ -13,10 +13,10 @@
 Add `nuxt-lazyimages` to your project:
 
 ```bash
-npm install --save-dev @kuarz-dev/nuxt-lazyimages
+npm install --save-dev nuxt-lazyimages
 
 # Using yarn
-yarn add --dev @kuarz-dev/nuxt-lazyimages
+yarn add --dev nuxt-lazyimages
 ```
 
 Add it to the `modules` array in your `nuxt.config.ts`:
@@ -52,8 +52,8 @@ Add the default `class` `lazyload` to your image in conjunction with a `data-src
 
 - Clone this repository
 - Install dependencies using `npm install`
-- Stub module with `npm dev:prepare`
-- Run `npm dev` to start [playground](./playground) in development mode
+- Stub module with `npm run dev:prepare`
+- Run `npm run dev` to start [playground](./playground) in development mode
 
 ## Credits
 
