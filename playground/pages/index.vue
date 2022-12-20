@@ -2,6 +2,7 @@
     <div>
         This image will lazyload with a fade in:<br />
         <img class="lazyimages" data-src="/torino.jpeg" height="525" width="700" alt="">
+        <Navigation/>
     </div>
 </template>
 

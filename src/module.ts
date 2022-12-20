@@ -1,6 +1,11 @@
 import { fileURLToPath } from 'url'
 import { defineNuxtModule, addPlugin, addTemplate, createResolver } from '@nuxt/kit'
 
+export interface PluginOptions {
+    /**  This simple and small plugin allows you to define multiple background images with a width descriptor */
+    bgset?: boolean,
+}
+
 export interface ModuleOptions {
     /** Marker class for all elements which should be lazy loaded. */
     lazyClass?: string,
@@ -44,6 +49,8 @@ export interface ModuleOptions {
     ricTimeout?: number,
     /** The timeout option used to throttle all listeners.  */
     throttleDelay?: number
+    /** Activate plugins */
+    plugins?: PluginOptions
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -52,26 +59,9 @@ export default defineNuxtModule<ModuleOptions>({
         configKey: 'lazyimages'
     },
     defaults: {
-        /*lazyClass: 'lazyload',
-        preloadAfterLoad: false,
-        loadedClass: 'lazyloaded',
-        loadingClass: 'lazyloading',
-        preloadClass: 'lazypreload',
-        errorClass: 'lazyerror',
-        autosizesClass: 'lazyautosizes',
-        fastLoadedClass: 'ls-is-cached',
-        iframeLoadMode: 0,
-        srcAttr: 'data-src',
-        srcsetAttr: 'data-srcset',
-        sizesAttr: 'data-sizes',
-        minSize: 40,
-        customMedia: {},
-        expFactor: 1.5,
-        hFac: 0.8,
-        loadMode: 2,
-        loadHidden: true,
-        ricTimeout: 0,
-        throttleDelay: 125*/
+        plugins: {
+            bgset: false
+        }
     },
     setup(options, nuxt) {
         const { resolve } = createResolver(import.meta.url)

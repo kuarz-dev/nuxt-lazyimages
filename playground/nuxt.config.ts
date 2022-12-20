@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     ],
     lazyimages: {
         lazyClass: 'lazyimages',
-        expFactor: 5
+        expFactor: 5,
+        plugins: {
+            bgset: true
+        }
     }
 })

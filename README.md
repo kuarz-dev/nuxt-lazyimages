@@ -87,6 +87,26 @@ export default defineNuxtConfig({
 
 Please refer to [LazySizes' JS documentation](https://github.com/aFarkas/lazysizes#js-api) to know more about each option.
 
+## Plugins
+
+Currently supported Lazysizes plugins:
+
+- [x] bgset
+
+Open your `nuxt.config.ts` or `nuxt.config.js` file and activate whichever plugin you prefer:
+
+```ts
+export default defineNuxtConfig({
+    lazyimages: {
+        plugins: {
+            bgset: true
+        }
+    }
+})
+```
+
+
+
 ## Development
 
 - Clone this repository
