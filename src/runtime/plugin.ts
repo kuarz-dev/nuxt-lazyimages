@@ -16,7 +16,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
         bgset(window, window.document, lazysizes)
     }
 
-    // Init with new config
-    lazysizes.init()
+    nuxtApp.hook('app:mounted', () => {
+        // Init with new config
+        lazysizes.init()
+    })
 
 });
